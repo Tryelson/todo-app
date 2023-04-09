@@ -10,7 +10,7 @@ const config: NuxtConfig = {
     buildModules: [
         '@nuxt/typescript-build',
         '@pinia/nuxt',
-        
+        'vue-smooth-dnd'
     ],
     css: [
         '@/assets/css/globals.css',

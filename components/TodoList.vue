@@ -1,88 +1,110 @@
 <template>
-    <div class="flex flex-col gap-[60px]">
-        <div>
-            <h2 class="bg-[#dc811a] max-w-[140px] shadow-md uppercase text-center rounded-md py-[5px]">To do</h2>
+    <div class="flex flex-col gap-[60px] pb-[20px]">
+        <StatusTable
+            statusName="To do"
+            statusColor="bg-[#dc811a]"
+            :taskList="getList('todo')"
+            @drop="$event => onDropDrag($event, 'todo')"
+            @dragenter.prevent
+            @dragover.prevent
+        />
 
-            <table class="mt-[20px] bg-[#2C3440] shadow-md rounded-md w-[100%] overflow-hidden">
-                <thead class="text-left border-b-[1px] border-[#455266] text-[#29A19C]">
-                    <th class="py-[15px] px-[15px]">Task name</th>
-                    <th class="py-[15px] px-[15px]">Type</th>
-                    <th class="py-[15px] px-[15px]">Deadline</th>
-                </thead>
-                
-                <tbody>
-                    <tr class="hover:bg-[#384353] cursor-pointer">
-                        <td class="py-[25px] px-[15px]">Long text task name</td>
-                        <td class="py-[25px] px-[15px]">Task text type</td>
-                        <td class="py-[25px] px-[15px]">01/01/2023</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div>
-            <h2 class="bg-[#3f75db] max-w-[140px] shadow-md uppercase text-center rounded-md py-[5px]">In Progress</h2>
+        <StatusTable
+            statusName="To do"
+            statusColor="bg-[#3f75db]"
+            :taskList="getList('in progress')"
+            @drop="$event => onDropDrag($event, 'in progress')"
+            @dragenter.prevent
+            @dragover.prevent
+        />
 
-            <table class="mt-[20px] bg-[#2C3440] shadow-md rounded-md w-[100%] overflow-hidden">
-                <thead class="text-left border-b-[1px] border-[#455266] text-[#29A19C]">
-                    <th class="py-[15px] px-[15px]">Task name</th>
-                    <th class="py-[15px] px-[15px]">Type</th>
-                    <th class="py-[15px] px-[15px]">Deadline</th>
-                </thead>
-                
-                <tbody>
-                    <tr class="hover:bg-[#384353] cursor-pointer">
-                        <td class="py-[25px] px-[15px]">Long text task name</td>
-                        <td class="py-[25px] px-[15px]">Task text type</td>
-                        <td class="py-[25px] px-[15px]">01/01/2023</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <StatusTable
+            statusName="Done"
+            statusColor="bg-[#51bb51]"
+            :taskList="getList('done')"
+            @drop="$event => onDropDrag($event, 'done')"
+            @dragenter.prevent
+            @dragover.prevent
+        />
 
-        <div>
-            <h2 class="bg-[#51bb51] max-w-[140px] shadow-md uppercase text-center rounded-md py-[5px]">Done</h2>
-
-            <table class="mt-[20px] bg-[#2C3440] shadow-md rounded-md w-[100%] overflow-hidden">
-                <thead class="text-left border-b-[1px] border-[#455266] text-[#29A19C]">
-                    <th class="py-[15px] px-[15px]">Task name</th>
-                    <th class="py-[15px] px-[15px]">Type</th>
-                    <th class="py-[15px] px-[15px]">Deadline</th>
-                </thead>
-                
-                <tbody>
-                    <tr class="hover:bg-[#384353] cursor-pointer">
-                        <td class="py-[25px] px-[15px]">Long text task name</td>
-                        <td class="py-[25px] px-[15px]">Task text type</td>
-                        <td class="py-[25px] px-[15px]">01/01/2023</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div>
-            <h2 class="bg-[#c1c104] max-w-[140px] shadow-md uppercase text-center rounded-md py-[5px]">Blocked</h2>
-
-            <table class="mt-[20px] bg-[#2C3440] shadow-md rounded-md w-[100%] overflow-hidden">
-                <thead class="text-left border-b-[1px] border-[#455266] text-[#29A19C]">
-                    <th class="py-[15px] px-[15px]">Task name</th>
-                    <th class="py-[15px] px-[15px]">Type</th>
-                    <th class="py-[15px] px-[15px]">Deadline</th>
-                </thead>
-                
-                <tbody>
-                    <tr class="hover:bg-[#384353] cursor-pointer">
-                        <td class="py-[25px] px-[15px]">Long text task name</td>
-                        <td class="py-[25px] px-[15px]">Task text type</td>
-                        <td class="py-[25px] px-[15px]">01/01/2023</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <StatusTable
+            statusName="Blocked"
+            statusColor="bg-[#c1c104]"
+            :taskList="getList('blocked')"
+            @drop="$event => onDropDrag($event, 'blocked')"
+            @dragenter.prevent
+            @dragover.prevent
+        />
     </div>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {
+  name: "Todo list",
+  data() {
+    return {
+        tasks: [
+            {
+                id: 0,
+                taskName: '1 - Long text task teste',
+                taskType: 'Task',
+                taskTypeColor: 'purple',
+                taskDeadline: '01/01/2023',
+                status: 'todo'
+            },
+            {
+                id: 1,
+                taskName: '2 - Long text task teste',
+                taskType: 'Epic',
+                taskTypeColor: 'purple',
+                taskDeadline: '01/01/2023',
+                status: 'in progress'
+            },
+            {
+                id: 2,
+                taskName: '3 - Long text task teste',
+                taskType: 'Story',
+                taskTypeColor: 'gray',
+                taskDeadline: '01/01/2023' ,
+                status: 'done'
+            },
+            {
+                id: 3,
+                taskName: '4 - Long text task teste',
+                taskType: 'Task',
+                taskTypeColor: 'purple',
+                taskDeadline: '01/01/2023',
+                status: 'blocked'
+            },
+            {
+                id: 4,
+                taskName: '5 - Long text task teste',
+                taskType: 'Story',
+                taskTypeColor: 'gray',
+                taskDeadline: '01/01/2023',
+                status: 'todo'
+            },
+            {
+                id: 5,
+                taskName: '6 - Long text task teste',
+                taskType: 'Bug',
+                taskTypeColor: 'red',
+                taskDeadline: '01/01/2023' ,
+                status: 'in progress'
+            },
+        ],
+    };
+  },
+  methods: {
+    getList(status){
+        return this.tasks.filter(item => item.status === status)
+    },
+
+    onDropDrag(event, status){
+        const itemID = event.dataTransfer.getData('itemID')
+        const item = this.tasks.find(item => item.id == itemID)
+        item.status = status
+    },
+  }
+};
 </script>
