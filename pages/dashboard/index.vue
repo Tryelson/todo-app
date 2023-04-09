@@ -21,6 +21,10 @@
                     </div>
                 </div>
             </header>
+
+            <div class="mt-[100px]">
+                <TodoList />
+            </div>
         </div>
     </main>
 </template>

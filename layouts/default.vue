@@ -1,6 +1,8 @@
 <template>
-    <div class="flex min-h-min-[100vh]">
+    <div class="flex">
         <SideNav />
-        <slot />
+        <div class="ml-[300px] w-[100%]">
+            <slot />
+        </div>
     </div>
 </template>
