@@ -14,7 +14,7 @@
                     <tr :key="item.id" v-for="item in taskList" class="hover:bg-[#384353] cursor-pointer" draggable="true" @dragstart="$event => onStartDrag($event, item)">
                         <td class="py-[25px] px-[15px]">{{ item.taskName }}</td>
                         <td class="py-[25px] px-[15px]">
-                            <div class="bg-[gray] w-[100%] max-w-[120px] py-[5px] rounded-md text-center"><span>{{ item.taskType }}</span></div>
+                            <div class="w-[100%] bg-[#558aa3] max-w-[120px] py-[5px] rounded-md text-center"><span>{{ item.taskType }}</span></div>
                         </td>
                         <td class="py-[25px] px-[15px]">{{ item.taskDeadline }}</td>
                     </tr>
@@ -32,7 +32,14 @@
             'statusColor',
             'taskList',
         ],
+        data(){
+            return{
+                taskTypeColor: ''
+            }
+        },
+        computed: {
 
+        },
         methods: {
             onStartDrag(event, item){
                 event.dataTransfer.dropEffect = 'move'

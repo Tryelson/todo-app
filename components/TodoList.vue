@@ -10,7 +10,7 @@
         />
 
         <StatusTable
-            statusName="To do"
+            statusName="In Progress"
             statusColor="bg-[#3f75db]"
             :taskList="getList('in progress')"
             @drop="$event => onDropDrag($event, 'in progress')"
@@ -48,7 +48,7 @@ export default {
                 id: 0,
                 taskName: '1 - Long text task teste',
                 taskType: 'Task',
-                taskTypeColor: 'purple',
+                taskTypeColor: 'bg-[purple]',
                 taskDeadline: '01/01/2023',
                 status: 'todo'
             },
@@ -56,7 +56,7 @@ export default {
                 id: 1,
                 taskName: '2 - Long text task teste',
                 taskType: 'Epic',
-                taskTypeColor: 'purple',
+                taskTypeColor: 'bg-[purple]',
                 taskDeadline: '01/01/2023',
                 status: 'in progress'
             },
@@ -64,7 +64,7 @@ export default {
                 id: 2,
                 taskName: '3 - Long text task teste',
                 taskType: 'Story',
-                taskTypeColor: 'gray',
+                taskTypeColor: 'bg-[gray]',
                 taskDeadline: '01/01/2023' ,
                 status: 'done'
             },
@@ -72,7 +72,7 @@ export default {
                 id: 3,
                 taskName: '4 - Long text task teste',
                 taskType: 'Task',
-                taskTypeColor: 'purple',
+                taskTypeColor: 'bg-[purple]',
                 taskDeadline: '01/01/2023',
                 status: 'blocked'
             },
@@ -80,7 +80,7 @@ export default {
                 id: 4,
                 taskName: '5 - Long text task teste',
                 taskType: 'Story',
-                taskTypeColor: 'gray',
+                taskTypeColor: 'bg-[gray]',
                 taskDeadline: '01/01/2023',
                 status: 'todo'
             },
@@ -88,7 +88,7 @@ export default {
                 id: 5,
                 taskName: '6 - Long text task teste',
                 taskType: 'Bug',
-                taskTypeColor: 'red',
+                taskTypeColor: 'bg-[red]',
                 taskDeadline: '01/01/2023' ,
                 status: 'in progress'
             },
