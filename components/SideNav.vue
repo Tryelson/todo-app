@@ -1,5 +1,5 @@
 <template>
-    <aside class="bg-[#2C3440] shadow-lg shadow-black w-[100%] h-[100vh] max-w-[300px] backdrop-blur opacity-[1] z-[20] flex">
+    <aside class="bg-[#2C3440] fixed shadow-lg shadow-black w-[100%] h-[100vh] max-w-[300px] backdrop-blur opacity-[1] flex">
         <div class="w-[100%] mx-[auto] pt-[20px] flex flex-col">
             <div class="px-[20px] pb-[60px] flex items-center gap-[20px]">
                 <img src="@/assets/img/logo.svg" alt="">
