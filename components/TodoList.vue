@@ -45,23 +45,23 @@ export default {
     return {
         tasks: [
             {
-                id: 0,
+                id: 1,
                 taskName: '1 - Long text task teste',
                 taskType: 'Task',
-                taskTypeColor: 'bg-[purple]',
+                taskTypeColor: 'bg-[rebeccapurple]',
                 taskDeadline: '01/01/2023',
                 status: 'todo'
             },
             {
-                id: 1,
+                id: 2,
                 taskName: '2 - Long text task teste',
                 taskType: 'Epic',
-                taskTypeColor: 'bg-[purple]',
+                taskTypeColor: 'bg-[#1c429e]',
                 taskDeadline: '01/01/2023',
                 status: 'in progress'
             },
             {
-                id: 2,
+                id: 3,
                 taskName: '3 - Long text task teste',
                 taskType: 'Story',
                 taskTypeColor: 'bg-[gray]',
@@ -69,15 +69,15 @@ export default {
                 status: 'done'
             },
             {
-                id: 3,
+                id: 4,
                 taskName: '4 - Long text task teste',
                 taskType: 'Task',
-                taskTypeColor: 'bg-[purple]',
+                taskTypeColor: 'bg-[rebeccapurple]',
                 taskDeadline: '01/01/2023',
                 status: 'blocked'
             },
             {
-                id: 4,
+                id: 5,
                 taskName: '5 - Long text task teste',
                 taskType: 'Story',
                 taskTypeColor: 'bg-[gray]',
@@ -85,7 +85,7 @@ export default {
                 status: 'todo'
             },
             {
-                id: 5,
+                id: 6,
                 taskName: '6 - Long text task teste',
                 taskType: 'Bug',
                 taskTypeColor: 'bg-[red]',

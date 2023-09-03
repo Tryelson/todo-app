@@ -1,14 +1,14 @@
 <template>
-    <aside class="bg-[#2C3440] fixed shadow-lg shadow-black w-[100%] h-[100vh] max-w-[300px] backdrop-blur opacity-[1] flex">
+    <aside class="bg-[#181c23] fixed shadow-lg shadow-black w-[100%] h-[100vh] max-w-[300px] backdrop-blur opacity-[1] flex">
         <div class="w-[100%] mx-[auto] pt-[20px] flex flex-col">
             <div class="px-[20px] pb-[60px] flex items-center gap-[20px]">
-                <img src="@/assets/img/logo.svg" alt="">
-                <h2 class="text-[#29A19C] hover:scale-105 transition-transform duration-300 uppercase font-bold text-[20px] leading-[26px]">Task<br> <span class="text-[white]">Manager</span></h2>
+                <img src="@/assets/img/new-logo.png" alt="">
+                <h2 class="text-[#4CCFF1] hover:scale-105 transition-transform duration-300 uppercase font-bold text-[20px] leading-[26px]">Task<br> <span class="text-[white]">Manager</span></h2>
             </div>
 
             <nav class="mt-[60px]">
                 <div>
-                    <h3 class="pl-[20px] mb-[20px] text-[24px] text-[#29A19C]">My Workspace</h3>
+                    <h3 class="pl-[20px] mb-[20px] text-[24px] text-[#4CCFF1]">My Workspace</h3>
                     <ul class="flex flex-col">
                         <li>
                             <NuxtLink to="#" class="text-[white] text-[18px] transition-all duration-[0.3s] hover:bg-[#1b6967] w-[100%] pl-[40px] py-[15px] flex gap-[20px]">
