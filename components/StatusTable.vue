@@ -14,7 +14,7 @@
             <tr
               :key="item.id"
               v-for="item in taskList"
-              class="cursor-pointer drag-item"
+              class="cursor-pointer drag-item transition-all duration-[0.3s] hover:bg-[#3294b8]"
               draggable="true"
               @dragstart="$event => onStartDrag($event, item)"
             >

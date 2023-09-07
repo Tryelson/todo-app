@@ -11,13 +11,13 @@
                     <h3 class="pl-[20px] mb-[20px] text-[24px] text-[#4CCFF1]">My Workspace</h3>
                     <ul class="flex flex-col">
                         <li>
-                            <NuxtLink to="#" class="text-[white] text-[18px] transition-all duration-[0.3s] hover:bg-[#1b6967] w-[100%] pl-[40px] py-[15px] flex gap-[20px]">
+                            <NuxtLink to="#" class="text-[white] text-[18px] transition-all duration-[0.3s] hover:bg-[#3294b8] w-[100%] pl-[40px] py-[15px] flex gap-[20px]">
                                 <img src="@/assets/img/dashboard-icon.svg" alt="Dashboard Icon" class="max-w-[20px]">
                                 Dashboard
                             </NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink to="#" class="text-[white] text-[18px] transition-all duration-[0.3s] hover:bg-[#1b6967] w-[100%] pl-[40px] py-[15px] flex gap-[20px]">
+                            <NuxtLink to="#" class="text-[white] text-[18px] transition-all duration-[0.3s] hover:bg-[#3294b8] w-[100%] pl-[40px] py-[15px] flex gap-[20px]">
                                 <img src="@/assets/img/profile-icon.svg" alt="Profile Icon" class="max-w-[20px]">
                                 My Profile
                             </NuxtLink>
@@ -27,7 +27,7 @@
             </nav>
 
             <div class="w-[100%] pb-[20px] mt-[auto]">
-                <NuxtLink href="#" class="text-[white] hover:bg-[#1b6967] transition-all duration-[0.3s] w-[100%] pl-[20px] py-[15px] flex gap-[20px]">
+                <NuxtLink href="#" class="text-[white] hover:bg-[#3294b8] transition-all duration-[0.3s] w-[100%] pl-[20px] py-[15px] flex gap-[20px]">
                     <img class="max-w-[20px]" src="@/assets/img/logout-icon.svg" alt="">
                     Logout
                 </NuxtLink>
